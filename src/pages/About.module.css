@@ -148,3 +148,33 @@
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
   }
 }
+
+/* --- Contractor portrait -------------------------------------------- */
+.portrait {
+  width: 100%;
+  max-width: 26rem;
+  margin: 0 auto;
+}
+
+.portraitImage {
+  border-radius: var(--radius);
+}
+
+.portraitCaption {
+  display: grid;
+  gap: 0.15rem;
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--amber);
+  color: var(--ink);
+  font-weight: var(--fw-medium);
+  line-height: 1.4;
+}
+
+.portraitRole {
+  color: var(--ink-soft);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+  letter-spacing: calc(var(--label-tracking) * 0.6);
+  text-transform: var(--label-transform);
+}

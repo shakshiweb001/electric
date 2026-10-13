@@ -349,6 +349,9 @@
         "Team and equipment details",
         "Firm logo"
       ]
+    },
+    "contractor": {
+      "role": "Contractor"
     }
   },
   "contact": {

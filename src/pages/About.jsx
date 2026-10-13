@@ -3,12 +3,12 @@ import Seo from '../components/Seo.jsx';
 import PageHeader from '../components/PageHeader.jsx';
 import SectionHeading from '../components/SectionHeading.jsx';
 import Reveal from '../components/Reveal.jsx';
-import ParallaxPhoto from '../components/ParallaxPhoto.jsx';
+import SmartImage from '../components/SmartImage.jsx';
 import CopyButton from '../components/CopyButton.jsx';
 import Placeholder from '../components/Placeholder.jsx';
 import CtaBand from '../components/CtaBand.jsx';
 import { DocumentIcon } from '../components/Icons.jsx';
-import { images } from '../data/images.js';
+import { contractorPhoto, images } from '../data/images.js';
 import { SHOW_PLACEHOLDERS, site } from '../data/site.js';
 import styles from './About.module.css';
 
@@ -47,8 +47,12 @@ export default function About() {
               <p>{t('about.intro.p2')}</p>
             </Reveal>
           </div>
-          <Reveal>
-            <ParallaxPhoto image={images.hillVillage} />
+          <Reveal as="figure" className={styles.portrait}>
+            <SmartImage image={contractorPhoto} className={styles.portraitImage} />
+            <figcaption className={styles.portraitCaption}>
+              <span className={styles.portraitRole}>{t('about.contractor.role')}</span>
+              <span lang="en">{site.name}</span>
+            </figcaption>
           </Reveal>
         </div>
       </section>

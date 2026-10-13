@@ -294,6 +294,19 @@ export const images = {
   },
 };
 
+// The contractor, photo supplied by the client. A local file, so it is served
+// as it is from /public/photos/.
+export const contractorPhoto = {
+  src: '/photos/contractor.jpg',
+  width: 960,
+  height: 1200,
+  color: '#5a4a3a',
+  alt: {
+    en: 'The contractor of M/s R.K. Govt. Contractor',
+    hi: 'M/s R.K. Govt. Contractor के ठेकेदार',
+  },
+};
+
 export function altFor(image, lang) {
   if (!image?.alt) return '';
   if (typeof image.alt === 'string') return image.alt;
