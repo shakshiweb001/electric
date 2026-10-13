@@ -96,6 +96,12 @@ export default function Footer() {
         <p>
           © {year} <span lang="en">{site.name}</span>. {t('footer.rights')}
         </p>
+        <p lang="en">
+          Powered by{' '}
+          <a className={styles.powered} href="https://brandpixo.com" target="_blank" rel="noopener">
+            brandpixo.com
+          </a>
+        </p>
         <button type="button" className={styles.toTop} onClick={scrollToTop}>
           {t('footer.backToTop')}
           <ArrowUpIcon />
