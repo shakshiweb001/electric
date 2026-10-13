@@ -1,13 +1,12 @@
 import { useRef } from 'react';
 import SmartImage from './SmartImage.jsx';
-import PhotoTag from './PhotoTag.jsx';
 import { INLINE_PICTURE } from '../data/picture.js';
 import useParallax from '../hooks/useParallax.js';
 import cx from '../lib/cx.js';
 import styles from './ParallaxPhoto.module.css';
 
 // A framed photo placed beside text. The photo drifts inside its frame as the
-// page scrolls, and stock photos carry their "Stock photo" label.
+// page scrolls.
 export default function ParallaxPhoto({ image, picture = INLINE_PICTURE, className }) {
   const frameRef = useRef(null);
   const mediaRef = useRef(null);
@@ -22,11 +21,6 @@ export default function ParallaxPhoto({ image, picture = INLINE_PICTURE, classNa
       <div ref={mediaRef} className={styles.media}>
         <SmartImage image={image} picture={picture} fill />
       </div>
-      {image.stock && (
-        <figcaption className={styles.caption}>
-          <PhotoTag image={image} />
-        </figcaption>
-      )}
     </figure>
   );
 }

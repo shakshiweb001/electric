@@ -28,12 +28,6 @@
   background: linear-gradient(90deg, rgba(20, 44, 37, 0.95) 0%, rgba(26, 56, 46, 0.84) 50%, rgba(31, 65, 54, 0.52) 100%);
 }
 
-.photoTag {
-  position: absolute;
-  right: var(--gutter);
-  bottom: 0.9rem;
-}
-
 @media (max-width: 640px) {
   .steel {
     background: rgba(15, 27, 38, 0.86);

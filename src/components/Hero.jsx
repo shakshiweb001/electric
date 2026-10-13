@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import SmartImage from './SmartImage.jsx';
 import HeroPowerLine from './HeroPowerLine.jsx';
-import PhotoTag from './PhotoTag.jsx';
 import Button from './Button.jsx';
 import { ArrowRightIcon, WhatsAppIcon } from './Icons.jsx';
 import { images } from '../data/images.js';
@@ -83,8 +82,6 @@ export default function Hero() {
           </Button>
         </div>
       </div>
-
-      <PhotoTag image={images.hero} className={styles.photoTag} />
     </section>
   );
 }

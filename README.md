@@ -65,11 +65,11 @@ Edit the `seo` block at the top of `src/i18n/locales/en.json` (and `hi.json`). T
 
 ## Photographs and credits
 
-All current photos are stock photographs from [Unsplash](https://unsplash.com/license), loaded from the Unsplash CDN as AVIF or WebP with responsive sizes and a blurred placeholder. They are labelled "Stock photo" wherever they appear, the lightbox states that they do not show the firm's sites, and every photographer is credited in the footer ("Photo credits").
+All current photos are stock photographs from [Unsplash](https://unsplash.com/license), loaded from the Unsplash CDN as AVIF or WebP with responsive sizes and a blurred placeholder. The photos themselves carry no label or name. The gallery introduction and the lightbox caption state that they are stock photographs and do not show the firm's sites, and every photographer is credited in the footer ("Photo credits").
 
 Three of them (`hillsGreen`, `hillVillage`, `valleyVillage`) were photographed in Himachal Pradesh; the rest are from elsewhere and are illustrative only.
 
-When a stock photo is replaced with the firm's own, remove `credit` and `stock` from its entry and the label and credit disappear.
+When a stock photo is replaced with the firm's own, remove `credit` and `stock` from its entry and its credit and stock caption disappear.
 
 ## SEO
 

@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import SmartImage from './SmartImage.jsx';
-import PhotoTag from './PhotoTag.jsx';
 import { PAGE_HEADER_PICTURE } from '../data/picture.js';
 import useParallax from '../hooks/useParallax.js';
 import styles from './PageHeader.module.css';
@@ -27,8 +26,6 @@ export default function PageHeader({ image, eyebrow, title, lede }) {
         </h1>
         {lede && <p className={styles.lede}>{lede}</p>}
       </div>
-
-      <PhotoTag image={image} className={styles.photoTag} />
     </section>
   );
 }

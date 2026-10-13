@@ -63,12 +63,6 @@
   animation: fadeUp 1s var(--ease-out) 0.45s both;
 }
 
-.photoTag {
-  position: absolute;
-  right: var(--gutter);
-  bottom: 0.9rem;
-}
-
 @keyframes lineUp {
   to {
     transform: translateY(0);

@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import SmartImage from './SmartImage.jsx';
-import PhotoTag from './PhotoTag.jsx';
 import { BAND_PICTURE } from '../data/picture.js';
 import useParallax from '../hooks/useParallax.js';
 import cx from '../lib/cx.js';
@@ -20,7 +19,6 @@ export default function ParallaxBand({ image, tint = 'steel', className, childre
       </div>
       <div className={cx(styles.overlay, styles[tint])} aria-hidden="true" />
       {children}
-      <PhotoTag image={image} className={styles.photoTag} />
     </section>
   );
 }

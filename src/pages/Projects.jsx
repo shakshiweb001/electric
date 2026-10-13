@@ -212,9 +212,9 @@ export default function Projects() {
                         <span className={styles.thumb}>
                           <SmartImage image={photo} picture={TILE_PICTURE} alt="" fill className={styles.thumbImage} />
                         </span>
-                        <span className={cx(styles.badge, entry.type === 'site' && styles.badgeSite)}>
-                          {entry.type === 'stock' ? t('common.stockTag') : t('projects.gallery.siteTag')}
-                        </span>
+                        {entry.type === 'site' && (
+                          <span className={cx(styles.badge, styles.badgeSite)}>{t('projects.gallery.siteTag')}</span>
+                        )}
                         <span className={styles.tileFoot}>
                           <span>{labelFor(entry.category)}</span>
                           <ZoomInIcon />
