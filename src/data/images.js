@@ -302,8 +302,8 @@ export const contractorPhoto = {
   height: 1200,
   color: '#5a4a3a',
   alt: {
-    en: 'The contractor of M/s R.K. Govt. Contractor',
-    hi: 'M/s R.K. Govt. Contractor के ठेकेदार',
+    en: 'Raj Dev, contractor, M/s R.K. Govt. Contractor',
+    hi: 'राज देव, ठेकेदार, M/s R.K. Govt. Contractor',
   },
 };
 

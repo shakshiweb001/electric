@@ -344,14 +344,14 @@
     "pending": {
       "title": "Details still to be added",
       "items": [
-        "Name of the proprietor or authorised signatory",
         "Year of establishment",
         "Team and equipment details",
         "Firm logo"
       ]
     },
     "contractor": {
-      "role": "Contractor"
+      "role": "Contractor",
+      "name": "Raj Dev"
     }
   },
   "contact": {

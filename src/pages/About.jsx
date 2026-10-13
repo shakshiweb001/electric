@@ -50,8 +50,10 @@ export default function About() {
           <Reveal as="figure" className={styles.portrait}>
             <SmartImage image={contractorPhoto} className={styles.portraitImage} />
             <figcaption className={styles.portraitCaption}>
-              <span className={styles.portraitRole}>{t('about.contractor.role')}</span>
-              <span lang="en">{site.name}</span>
+              <span className={styles.portraitName}>{t('about.contractor.name')}</span>
+              <span className={styles.portraitRole}>
+                {t('about.contractor.role')}, <span lang="en">{site.name}</span>
+              </span>
             </figcaption>
           </Reveal>
         </div>

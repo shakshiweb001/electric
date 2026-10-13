@@ -171,10 +171,14 @@
   line-height: 1.4;
 }
 
+.portraitName {
+  font-family: var(--font-head);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-head);
+  line-height: 1.2;
+}
+
 .portraitRole {
   color: var(--ink-soft);
-  font-size: var(--fs-label);
-  font-weight: var(--fw-bold);
-  letter-spacing: calc(var(--label-tracking) * 0.6);
-  text-transform: var(--label-transform);
+  font-size: var(--fs-small);
 }
