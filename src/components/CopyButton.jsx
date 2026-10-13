@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { CheckIcon, CopyIcon } from './Icons.jsx';
 import styles from './CopyButton.module.css';
 
-// Copies a registration number (GSTIN, PAN, licence) to the clipboard.
+// Copies a registration number (GSTIN, licence) to the clipboard.
 export default function CopyButton({ value, label }) {
   const { t } = useTranslation();
   const [copied, setCopied] = useState(false);

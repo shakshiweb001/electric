@@ -86,8 +86,7 @@
       "class": "Contractor class",
       "classValue": "A-Class",
       "licence": "Licence No.",
-      "gstin": "GSTIN",
-      "pan": "PAN"
+      "gstin": "GSTIN"
     },
     "services": {
       "eyebrow": "What we do",
@@ -324,7 +323,6 @@
       "classValue": "A-Class (Electrical)",
       "licence": "Licence No.",
       "gstin": "GSTIN",
-      "pan": "PAN",
       "address": "Address"
     },
     "documents": {

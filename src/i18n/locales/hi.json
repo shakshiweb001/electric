@@ -86,8 +86,7 @@
       "class": "ठेकेदार श्रेणी",
       "classValue": "ए-श्रेणी",
       "licence": "लाइसेंस नं.",
-      "gstin": "GSTIN",
-      "pan": "PAN"
+      "gstin": "GSTIN"
     },
     "services": {
       "eyebrow": "हमारा काम",
@@ -324,7 +323,6 @@
       "classValue": "ए-श्रेणी (विद्युत)",
       "licence": "लाइसेंस नं.",
       "gstin": "GSTIN",
-      "pan": "PAN",
       "address": "पता"
     },
     "documents": {

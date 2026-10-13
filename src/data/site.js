@@ -7,7 +7,6 @@ export const site = {
   contractorClass: 'A',
   licenceNo: 'A-1578',
   gstin: '02AKSPL4411A1ZQ',
-  pan: 'AKSPL4411A',
   address: {
     line1: 'Vill. Doh, P.O. Badhani',
     line2: 'Teh. Bhoranj, Distt. Hamirpur (H.P.)',

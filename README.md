@@ -40,7 +40,7 @@ Nothing on the site is invented: no years of experience, project counts, client 
 index.html                 Page skeleton. Meta tags are generated, see below.
 vite-plugin-site.js        Build step: per-route HTML and meta tags, JSON-LD, sitemap, robots, 404
 src/
-  data/site.js             Firm details (name, licence, GSTIN, PAN, address, phones). Edit here only.
+  data/site.js             Firm details (name, licence, GSTIN, address, phones). Edit here only.
   data/images.js           Every photo: URL, alt text (EN + HI), photographer credit
   data/services.js         The seven services
   data/projects.js         Featured project quantities and the gallery

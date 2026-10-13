@@ -21,7 +21,6 @@ export default function About() {
     { key: 'class', value: t('about.registration.classValue') },
     { key: 'licence', value: site.licenceNo, code: true, copy: true },
     { key: 'gstin', value: site.gstin, code: true, copy: true },
-    { key: 'pan', value: site.pan, code: true, copy: true },
     { key: 'address', value: site.address.full, lang: 'en' },
   ];
 
