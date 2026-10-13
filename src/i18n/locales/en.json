@@ -408,8 +408,6 @@
     "contact": "Contact",
     "registration": "Registration",
     "rights": "All rights reserved.",
-    "creditsLine": "Photography: stock photographs from Unsplash, used for illustration only. They do not show our project sites.",
-    "creditsSummary": "Photo credits ({{count}})",
     "backToTop": "Back to top"
   },
   "notFound": {

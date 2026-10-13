@@ -92,58 +92,6 @@
   color: var(--on-dark);
 }
 
-.credits {
-  display: grid;
-  gap: 0.6rem;
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-  border-top: 1px solid var(--line-dark);
-  font-size: 0.8125rem;
-  line-height: 1.55;
-}
-
-.creditsLine {
-  max-width: 52rem;
-}
-
-.details summary {
-  display: inline-block;
-  padding: 0.35rem 0;
-  color: var(--on-dark);
-  cursor: pointer;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
-  list-style: none;
-}
-
-.details summary::-webkit-details-marker {
-  display: none;
-}
-
-.details summary::after {
-  content: ' +';
-}
-
-.details[open] summary::after {
-  content: ' \2212';
-}
-
-.creditList {
-  display: grid;
-  gap: 0.4rem 2rem;
-  margin-top: 0.75rem;
-}
-
-.creditList a {
-  color: var(--on-dark);
-  text-decoration-color: rgba(233, 238, 240, 0.35);
-}
-
-.creditList a:hover {
-  color: var(--amber);
-}
-
 .bottom {
   display: flex;
   flex-wrap: wrap;
@@ -184,10 +132,6 @@
 
   .brand {
     grid-column: 1 / -1;
-  }
-
-  .creditList {
-    grid-template-columns: 1fr 1fr;
   }
 }
 

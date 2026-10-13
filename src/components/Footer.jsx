@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import Logo from './Logo.jsx';
 import { ArrowUpIcon } from './Icons.jsx';
 import { routes } from '../data/routes.js';
-import { creditedImages } from '../data/images.js';
 import { formatPhone, mapsHref, site, telHref } from '../data/site.js';
 import { whatsappLink } from '../lib/whatsapp.js';
 import { scrollToTop } from '../lib/scrollKit.js';
@@ -91,27 +90,6 @@ export default function Footer() {
             </div>
           </dl>
         </div>
-      </div>
-
-      <div className={`container ${styles.credits}`}>
-        <p className={styles.creditsLine}>{t('footer.creditsLine')}</p>
-        <details className={styles.details}>
-          <summary>{t('footer.creditsSummary', { count: creditedImages.length })}</summary>
-          <ul className={styles.creditList}>
-            {creditedImages.map((image) => (
-              <li key={image.key} lang="en">
-                <a href={image.credit.page} target="_blank" rel="noopener noreferrer">
-                  {image.alt.en}
-                </a>
-                {' by '}
-                <a href={image.credit.profile} target="_blank" rel="noopener noreferrer">
-                  {image.credit.name}
-                </a>
-                {' on Unsplash'}
-              </li>
-            ))}
-          </ul>
-        </details>
       </div>
 
       <div className={`container ${styles.bottom}`}>

@@ -299,8 +299,3 @@ export function altFor(image, lang) {
   if (typeof image.alt === 'string') return image.alt;
   return image.alt[lang] || image.alt.en || '';
 }
-
-// One entry per photographer-credited photo, for the footer credit list.
-export const creditedImages = Object.entries(images)
-  .filter(([, image]) => image.credit)
-  .map(([key, image]) => ({ key, ...image }));
