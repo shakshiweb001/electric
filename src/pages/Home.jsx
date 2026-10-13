@@ -61,6 +61,10 @@ function BelowTheFold() {
               <dt>{t('home.facts.gstin')}</dt>
               <dd className="code">{site.gstin}</dd>
             </div>
+            <div className={styles.fact}>
+              <dt>{t('home.facts.area')}</dt>
+              <dd>{t('home.facts.areaValue')}</dd>
+            </div>
           </Reveal>
         </div>
       </section>

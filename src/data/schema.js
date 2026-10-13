@@ -30,6 +30,7 @@ export function buildJsonLd(siteUrl) {
       addressRegion: site.address.region,
       addressCountry: site.address.country,
     },
+    areaServed: { '@type': 'State', name: site.address.region },
     contactPoint: [
       {
         '@type': 'ContactPoint',

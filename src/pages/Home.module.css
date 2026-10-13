@@ -216,20 +216,8 @@
   text-transform: var(--label-transform);
 }
 
-/* Three registration facts: the first spans both columns on phones. */
-.fact:first-child {
-  grid-column: 1 / -1;
-}
-
 @media (min-width: 720px) {
-  .factList {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .fact:first-child {
-    grid-column: auto;
-  }
-
+  .factList,
   .stats {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
