@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <!-- PLACEHOLDER mark. REPLACE with the firm's real logo. -->
+  <rect width="40" height="40" rx="6" fill="#f0a818"/>
+  <g fill="none" stroke="#0f1b26" stroke-linecap="round">
+    <path d="M20 9v23M12 14.5h16M14 32h12" stroke-width="2.8"/>
+    <path d="M13.5 14.5v-4M26.5 14.5v-4" stroke-width="2.4"/>
+    <path d="M3 13.5c4 3.5 7.5 2.5 10.5-3M26.5 10.5c3 5.5 6.5 6.5 10.5 3" stroke-width="1.8"/>
+  </g>
+</svg>

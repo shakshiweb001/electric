@@ -1,0 +1,143 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  background: rgba(8, 17, 26, 0.96);
+  color: var(--on-dark);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem var(--gutter);
+}
+
+.counter {
+  margin-right: auto;
+  color: var(--on-dark-soft);
+  font-family: var(--font-head);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
+.tool,
+.nav {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  background: rgba(21, 37, 51, 0.85);
+  color: var(--on-dark);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.tool:hover,
+.nav:hover {
+  border-color: var(--amber);
+  background: var(--steel-700);
+}
+
+.stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 0 var(--gutter);
+  overflow: hidden;
+}
+
+/* Zoomed: the stage becomes a scroll area, so the photo can be panned. */
+.stageZoomed {
+  display: block;
+  padding: 0;
+  overflow: auto;
+  cursor: grab;
+  overscroll-behavior: contain;
+}
+
+.stageZoomed:active {
+  cursor: grabbing;
+}
+
+.photo {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 2px;
+  cursor: zoom-in;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.photoZoomed {
+  width: 220%;
+  max-width: none;
+  max-height: none;
+  cursor: inherit;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.next {
+  right: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.caption {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.9rem var(--gutter) calc(1rem + env(safe-area-inset-bottom, 0px));
+  font-size: var(--fs-small);
+  line-height: 1.45;
+}
+
+.alt {
+  color: var(--on-dark);
+  font-weight: var(--fw-medium);
+}
+
+.meta {
+  color: var(--on-dark-soft);
+  font-size: 0.8125rem;
+}
+
+.meta a {
+  color: var(--on-dark);
+}
+
+.stock {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.05rem 0.45rem;
+  border-radius: 2px;
+  background: var(--amber);
+  color: var(--steel);
+  font-size: 0.6875rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.06em;
+  text-transform: var(--label-transform);
+}
+
+@media (min-width: 900px) {
+  .photoZoomed {
+    width: 170%;
+  }
+}

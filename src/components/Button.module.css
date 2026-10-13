@@ -1,0 +1,86 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  min-height: 3.25rem;
+  padding: 0.7rem 1.5rem;
+  border: 1.5px solid transparent;
+  border-radius: var(--radius);
+  font-family: var(--font-head);
+  font-size: 0.9375rem;
+  font-weight: var(--fw-bold);
+  font-stretch: 100%;
+  letter-spacing: calc(var(--label-tracking) * 0.4);
+  line-height: 1.2;
+  text-decoration: none;
+  text-transform: var(--label-transform);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s var(--ease-out);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.iconStart,
+.iconEnd {
+  display: inline-flex;
+  flex: none;
+}
+
+.iconStart svg,
+.iconEnd svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.iconEnd {
+  transition: transform 0.35s var(--ease-out);
+}
+
+.btn:hover .iconEnd,
+.btn:focus-visible .iconEnd {
+  transform: translateX(5px);
+}
+
+.primary {
+  background: var(--amber);
+  color: var(--steel);
+}
+
+.primary:hover {
+  background: var(--amber-300);
+}
+
+.pine {
+  background: var(--pine);
+  color: #fff;
+}
+
+.pine:hover {
+  background: var(--pine-800);
+}
+
+.light {
+  border-color: rgba(233, 238, 240, 0.5);
+  color: var(--on-dark);
+}
+
+.light:hover {
+  border-color: var(--on-dark);
+  background: rgba(233, 238, 240, 0.1);
+}
+
+.dark {
+  border-color: var(--steel);
+  color: var(--steel);
+}
+
+.dark:hover {
+  background: var(--steel);
+  color: var(--on-dark);
+}

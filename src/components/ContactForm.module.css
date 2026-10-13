@@ -1,0 +1,163 @@
+.wrap {
+  position: relative;
+}
+
+.form {
+  display: grid;
+  gap: 1.4rem 1.25rem;
+}
+
+.requiredNote {
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+  align-content: start;
+}
+
+.label {
+  color: var(--ink);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+}
+
+.optional {
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+
+.input {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.75rem 0.95rem;
+  border: 1.5px solid rgba(15, 27, 38, 0.28);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  line-height: 1.4;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.input:hover {
+  border-color: rgba(15, 27, 38, 0.55);
+}
+
+.input:focus-visible {
+  outline: none;
+  border-color: var(--pine);
+  box-shadow: 0 0 0 3px rgba(46, 91, 76, 0.25);
+}
+
+textarea.input {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.select {
+  padding-right: 2.75rem;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2313212c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-position: right 0.85rem center;
+  background-repeat: no-repeat;
+  background-size: 1.1rem;
+}
+
+.invalid {
+  border-color: #b3261e;
+}
+
+.invalid:focus-visible {
+  border-color: #b3261e;
+  box-shadow: 0 0 0 3px rgba(179, 38, 30, 0.2);
+}
+
+.hint {
+  color: var(--ink-soft);
+  font-size: 0.8125rem;
+}
+
+.error {
+  color: #9b1c15;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+}
+
+.submitRow {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: start;
+}
+
+.summary {
+  min-height: 1.4em;
+  color: #9b1c15;
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+}
+
+/* Success state */
+.success {
+  display: grid;
+  justify-items: start;
+  gap: 1rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid var(--line-light);
+  border-left: 4px solid var(--pine);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.tick {
+  width: 4.5rem;
+  height: 4.5rem;
+  fill: none;
+  stroke: var(--pine);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.successTitle {
+  font-size: var(--fs-h3);
+  line-height: calc(var(--head-leading) + 0.14);
+}
+
+.successTitle:focus {
+  outline: none;
+}
+
+.successBody {
+  max-width: 34rem;
+  color: var(--ink-soft);
+}
+
+.successActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .requiredNote,
+  .wide {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .submitRow > a,
+  .submitRow > button,
+  .successActions > * {
+    width: 100%;
+  }
+}

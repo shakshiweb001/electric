@@ -1,0 +1,114 @@
+.page {
+  display: grid;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: calc(var(--header-h) + 3rem) 0 var(--section-y);
+  background: var(--steel);
+  color: var(--on-dark);
+}
+
+.inner {
+  display: grid;
+  justify-items: start;
+}
+
+.art {
+  width: min(100%, 30rem);
+  height: auto;
+  margin-bottom: 2rem;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ground {
+  stroke: var(--line-dark);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 7;
+}
+
+.pole {
+  stroke: var(--on-dark);
+  stroke-width: 3;
+}
+
+.wire,
+.loose {
+  stroke: var(--on-dark-soft);
+  stroke-width: 1.6;
+}
+
+/* The two loose ends sway slightly. */
+.loose {
+  transform-box: fill-box;
+  animation: sway 4s ease-in-out infinite alternate;
+}
+
+.loose:nth-of-type(5) {
+  transform-origin: 0 0;
+}
+
+.loose:nth-of-type(6) {
+  transform-origin: 100% 0;
+  animation-delay: -1.3s;
+}
+
+@keyframes sway {
+  from {
+    transform: rotate(-2.5deg);
+  }
+  to {
+    transform: rotate(2.5deg);
+  }
+}
+
+.spark {
+  fill: var(--amber);
+  stroke: none;
+  animation: flicker 2.6s steps(1) infinite;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  8%,
+  14%,
+  52% {
+    opacity: 0.15;
+  }
+  11%,
+  55% {
+    opacity: 1;
+  }
+}
+
+.code {
+  color: var(--amber);
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.title {
+  max-width: 16ch;
+  margin-top: 0.75rem;
+  font-size: var(--fs-h1);
+}
+
+.body {
+  max-width: 32rem;
+  margin-top: 1.25rem;
+  color: var(--on-dark-soft);
+  font-size: var(--fs-lede);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2.25rem;
+}

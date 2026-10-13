@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0F1B26" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!--
+      The title, meta description, canonical link, Open Graph and Twitter tags,
+      image preloads and the LocalBusiness JSON-LD are generated for each route
+      by vite-plugin-site.js. Edit the text in src/i18n/locales/en.json ("seo")
+      and the business details in src/data/site.js, not here.
+    -->
+    <!--SITE:HEAD-->
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+
+    <!-- Visitors who will be shown Hindi should not see the English static hero text. -->
+    <script>
+      try {
+        if (/^hi/i.test(localStorage.getItem('rk-lang') || navigator.language || '')) {
+          document.documentElement.classList.add('prefers-hi');
+        }
+      } catch (e) {}
+    </script>
+
+    <!-- Critical styles: page colour and the static hero shown before the app starts. -->
+    <style>
+      :root {
+        --hero-overlay: linear-gradient(
+            180deg,
+            rgba(15, 27, 38, 0.74) 0%,
+            rgba(15, 27, 38, 0.3) 32%,
+            rgba(15, 27, 38, 0.5) 66%,
+            rgba(15, 27, 38, 0.97) 100%
+          ),
+          linear-gradient(90deg, rgba(15, 27, 38, 0.8) 0%, rgba(15, 27, 38, 0.18) 64%, rgba(15, 27, 38, 0) 100%);
+      }
+      html {
+        background: #0f1b26;
+      }
+      body {
+        margin: 0;
+      }
+      .shell {
+        position: relative;
+        height: 100vh;
+        height: 100svh;
+        min-height: 600px;
+        overflow: hidden;
+        background: #0f1b26;
+      }
+      .shell img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .shell::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: var(--hero-overlay);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"><!--SITE:SHELL--></div>
+    <noscript>
+      <div style="padding: 2rem; color: #e3e8ea; font-family: sans-serif; line-height: 1.6">
+        <h1>M/s R.K. Govt. Contractor</h1>
+        <p>A-Class government electrical contractor, Lic. No. A-1578.</p>
+        <p>Vill. Doh, P.O. Badhani, Teh. Bhoranj, Distt. Hamirpur (H.P.)</p>
+        <p>
+          Phone / WhatsApp: <a href="tel:+919816335541" style="color: #f0a818">98163 35541</a>, alternate:
+          <a href="tel:+918988001395" style="color: #f0a818">89880 01395</a>
+        </p>
+        <p>Please enable JavaScript to view the full website.</p>
+      </div>
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

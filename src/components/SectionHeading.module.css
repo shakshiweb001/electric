@@ -1,0 +1,39 @@
+.heading {
+  display: grid;
+  gap: 1.1rem;
+  max-width: 46rem;
+}
+
+.title {
+  font-size: var(--fs-h2);
+}
+
+.lede {
+  max-width: 38rem;
+  font-size: var(--fs-lede);
+  line-height: 1.5;
+}
+
+.light .eyebrow {
+  color: var(--pine);
+}
+
+.light .title {
+  color: var(--ink);
+}
+
+.light .lede {
+  color: var(--ink-soft);
+}
+
+.dark .eyebrow {
+  color: var(--amber);
+}
+
+.dark .title {
+  color: var(--on-dark);
+}
+
+.dark .lede {
+  color: var(--on-dark-soft);
+}

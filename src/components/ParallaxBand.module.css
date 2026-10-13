@@ -1,0 +1,45 @@
+.band {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--steel);
+  color: var(--on-dark);
+}
+
+/* Taller than the section, so there is always photo to reveal as it moves. */
+.media {
+  position: absolute;
+  inset: -14% 0;
+  z-index: -2;
+  will-change: transform;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.steel {
+  background: linear-gradient(90deg, rgba(15, 27, 38, 0.94) 0%, rgba(15, 27, 38, 0.8) 45%, rgba(15, 27, 38, 0.5) 100%);
+}
+
+.pine {
+  background: linear-gradient(90deg, rgba(20, 44, 37, 0.95) 0%, rgba(26, 56, 46, 0.84) 50%, rgba(31, 65, 54, 0.52) 100%);
+}
+
+.photoTag {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .steel {
+    background: rgba(15, 27, 38, 0.86);
+  }
+
+  .pine {
+    background: rgba(23, 50, 42, 0.88);
+  }
+}

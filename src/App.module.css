@@ -1,0 +1,10 @@
+/* Keeps the footer from jumping up in the moment between two pages. */
+.pages {
+  min-height: 100vh;
+  background: var(--steel);
+}
+
+.fallback {
+  min-height: 100vh;
+  background: var(--steel);
+}

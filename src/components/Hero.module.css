@@ -1,0 +1,84 @@
+/* Height, crop and overlay must stay in step with ".shell" in index.html. */
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  min-height: max(100vh, 600px);
+  min-height: max(100svh, 600px);
+  overflow: hidden;
+  background: var(--steel);
+  color: var(--on-dark);
+}
+
+/* The photo area is always exactly one screen tall, like the static shell,
+   even if the text makes the section taller on a small screen. */
+.media,
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: max(100vh, 600px);
+  height: max(100svh, 600px);
+}
+
+.media {
+  z-index: -3;
+  will-change: transform;
+}
+
+.kenBurns {
+  transform-origin: 62% 58%;
+  animation: kenBurns 32s ease-in-out infinite alternate;
+}
+
+@keyframes kenBurns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.12);
+  }
+}
+
+.overlay {
+  z-index: -2;
+  background: var(--hero-overlay);
+}
+
+.powerLine {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  z-index: -1;
+  height: clamp(120px, 13.9vw, 280px);
+}
+
+/* The buttons fade in once the live hero has mounted. */
+.actions {
+  animation: fadeUp 1s var(--ease-out) calc(0.8s + var(--intro-shift, 0ms)) both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.photoTag {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 0.9rem;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .photoTag {
+    right: auto;
+    left: var(--gutter);
+  }
+}
+

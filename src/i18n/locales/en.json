@@ -1,0 +1,424 @@
+{
+  "seo": {
+    "home": {
+      "title": "R.K. Govt. Contractor | Government Electrical Contractor Hamirpur",
+      "description": "A-Class government electrical contractor in Hamirpur, H.P. (Lic. No. A-1578): steel pole erection, LT line extension, ACSR stringing and earthing."
+    },
+    "services": {
+      "title": "Services | Steel Pole Erection and LT Line Extension, Himachal",
+      "description": "Steel tubular pole erection (9/8 m), LT line extension, 30 mm² ACSR conductor stringing, stay sets, earthing and RCC muff pipe supply in Himachal Pradesh."
+    },
+    "projects": {
+      "title": "Projects | LT Line Extension Work | R.K. Govt. Contractor",
+      "description": "LT extension to left-out houses from 25 KVA s/stn Khuddi-Gehra-1, Section Chandesh, UESD Bhaderwar (2025): 3 poles, 3 stay sets, 0.56 km ACSR."
+    },
+    "about": {
+      "title": "About | R.K. Govt. Contractor, Bhoranj, Hamirpur (H.P.)",
+      "description": "M/s R.K. Govt. Contractor is an A-Class government electrical contractor (Lic. No. A-1578, GSTIN 02AKSPL4411A1ZQ) based in Tehsil Bhoranj, Hamirpur."
+    },
+    "contact": {
+      "title": "Contact | Call or WhatsApp 98163 35541 | R.K. Govt. Contractor",
+      "description": "Contact M/s R.K. Govt. Contractor, Vill. Doh, P.O. Badhani, Teh. Bhoranj, Distt. Hamirpur (H.P.). Call or WhatsApp 9816335541, alternate 8988001395."
+    },
+    "notFound": {
+      "title": "Page not found | R.K. Govt. Contractor",
+      "description": "The page you are looking for could not be found."
+    }
+  },
+  "brand": {
+    "descriptor": "A-Class Govt. Electrical Contractor",
+    "licence": "Lic. No. A-1578"
+  },
+  "nav": {
+    "label": "Main",
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menu": "Menu",
+    "skip": "Skip to main content"
+  },
+  "lang": {
+    "label": "Language",
+    "en": "English",
+    "hi": "Hindi"
+  },
+  "common": {
+    "call": "Call",
+    "whatsapp": "WhatsApp",
+    "whatsappUs": "WhatsApp us",
+    "whatsappChat": "Chat with us on WhatsApp",
+    "callNumber": "Call {{number}}",
+    "alternate": "Alternate",
+    "allServices": "All services",
+    "contactUs": "Contact us",
+    "placeholderTag": "Placeholder",
+    "placeholderNote": "To be provided by the client",
+    "stockTag": "Stock photo",
+    "stockNote": "Illustrative stock photograph. It does not show our project site.",
+    "photoBy": "Photo by {{name}} on Unsplash",
+    "schematicNote": "Schematic for illustration. Not to scale.",
+    "waGreeting": "Hello, I would like to enquire about electrical contract work.",
+    "quickActions": "Quick contact",
+    "copy": "Copy",
+    "copied": "Copied",
+    "copyValue": "Copy {{label}}"
+  },
+  "cta": {
+    "eyebrow": "Get in touch",
+    "title": "Have an LT line or pole erection work to execute?",
+    "body": "Call or WhatsApp us with the name of the work and its location."
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "A-Class Govt. Electrical Contractor",
+      "line1": "Poles erected.",
+      "line2": "LT lines extended.",
+      "line3": "Power to the last house.",
+      "lede": "M/s R.K. Govt. Contractor is a government electrical contractor in Hamirpur, Himachal Pradesh. We erect steel tubular poles, extend LT lines and string ACSR conductor for State Electricity Board sub-divisions.",
+      "scroll": "Scroll"
+    },
+    "facts": {
+      "title": "Registration at a glance",
+      "class": "Contractor class",
+      "classValue": "A-Class",
+      "licence": "Licence No.",
+      "gstin": "GSTIN",
+      "pan": "PAN"
+    },
+    "services": {
+      "eyebrow": "What we do",
+      "title": "Line work, from the pole base to the conductor.",
+      "lede": "Erection, stringing, earthing and the material that goes with it. These are the items we take up on LT distribution lines.",
+      "askTitle": "Have an estimate in hand?",
+      "askBody": "Send the estimate or work order on WhatsApp and we will go through it with you."
+    },
+    "project": {
+      "eyebrow": "Featured project · 2025",
+      "title": "LT extension to left-out houses, Khuddi-Gehra-1",
+      "body": "LT extension to left-out houses from the 25 KVA sub-station Khuddi-Gehra-1, Section Chandesh, UESD Bhaderwar.",
+      "cta": "See project details",
+      "stats": {
+        "poles": "Steel tubular poles erected",
+        "staySets": "LT stay sets fixed",
+        "acsr": "ACSR conductor strung",
+        "giWire": "GI wire laid"
+      },
+      "units": {
+        "nos": "Nos.",
+        "km": "km"
+      },
+      "schematic": {
+        "label": "Schematic of the work: a 25 KVA sub-station feeding three poles that carry the line to the left-out houses.",
+        "substation": "25 KVA s/stn",
+        "substationName": "Khuddi-Gehra-1",
+        "poles": "3 steel tubular poles",
+        "houses": "Left-out houses"
+      }
+    },
+    "region": {
+      "eyebrow": "Where we work from",
+      "title": "Rooted in the hills of Hamirpur.",
+      "body": "Our base is Village Doh in Tehsil Bhoranj, District Hamirpur. From Bhoranj we take up LT line extension and steel pole erection work in Himachal Pradesh for State Electricity Board sub-divisions such as Electrical Sub Division Bhaderwar.",
+      "addressLabel": "Address",
+      "cta": "About the firm"
+    }
+  },
+  "services": {
+    "header": {
+      "eyebrow": "Services",
+      "title": "Pole erection, LT lines and line material.",
+      "lede": "Government electrical contract work on LT distribution lines in Himachal Pradesh: steel pole erection, line extension, conductor stringing, stays, earthing and material supply."
+    },
+    "list": {
+      "eyebrow": "Scope of work",
+      "title": "Seven items we take up.",
+      "lede": "Each one is a line item you will recognise from an estimate."
+    },
+    "items": {
+      "pole-erection": {
+        "title": "Steel tubular pole erection",
+        "desc": "Erection of steel tubular poles (9/8 m) for LT distribution lines.",
+        "specs": [
+          "Steel tubular poles",
+          "9/8 m"
+        ]
+      },
+      "lt-extension": {
+        "title": "LT line extension",
+        "desc": "Extension of LT lines from existing sub-stations to left-out houses.",
+        "specs": [
+          "LT lines",
+          "Left-out houses"
+        ]
+      },
+      "conductor-stringing": {
+        "title": "ACSR conductor stringing",
+        "desc": "Laying and stringing of 30 mm² ACSR conductor between poles.",
+        "specs": [
+          "ACSR",
+          "30 mm²"
+        ]
+      },
+      "stay-sets": {
+        "title": "LT stay sets and stay wire",
+        "desc": "Fixing of LT stay sets with stay wire to support poles.",
+        "specs": [
+          "LT stay sets",
+          "Stay wire"
+        ]
+      },
+      "earthing": {
+        "title": "Earthing",
+        "desc": "Earthing with GI wire (8 SWG), earthing sets and earth knobs.",
+        "specs": [
+          "GI wire 8 SWG",
+          "Earthing set",
+          "Earth knob"
+        ]
+      },
+      "muff-pipe": {
+        "title": "RCC muff pipe supply",
+        "desc": "Supply of ISI-marked RCC muff pipes to IS 458-1988.",
+        "specs": [
+          "ISI marked",
+          "IS 458-1988"
+        ]
+      },
+      "material-supply": {
+        "title": "Electrical material supply",
+        "desc": "Supply of line material: shackle insulators, D-iron, nuts and bolts, and aluminium paint.",
+        "specs": [
+          "Shackle insulators",
+          "D-iron",
+          "Nuts and bolts",
+          "Aluminium paint"
+        ]
+      }
+    },
+    "anatomy": {
+      "eyebrow": "On the pole",
+      "title": "Where each item sits on the line.",
+      "lede": "The same items that appear in an estimate, shown on a single LT pole.",
+      "note": "Illustrative schematic, not a construction drawing. Not to scale.",
+      "label": "Schematic of an LT pole with numbered parts, described in the list that follows.",
+      "ground": "Ground level",
+      "parts": {
+        "1": {
+          "t": "Steel tubular pole",
+          "d": "9/8 m"
+        },
+        "2": {
+          "t": "Shackle insulators on D-iron",
+          "d": "Fixed with nuts and bolts"
+        },
+        "3": {
+          "t": "ACSR conductor",
+          "d": "30 mm²"
+        },
+        "4": {
+          "t": "LT stay set",
+          "d": "With stay wire"
+        },
+        "5": {
+          "t": "Earthing",
+          "d": "GI wire 8 SWG, earthing set, earth knob"
+        },
+        "6": {
+          "t": "RCC muff pipe",
+          "d": "ISI marked, IS 458-1988"
+        },
+        "7": {
+          "t": "Aluminium paint",
+          "d": "Paint finish"
+        }
+      }
+    },
+    "site": {
+      "eyebrow": "On site",
+      "title": "Work that happens at height, in the open.",
+      "body": "Line work is done outdoors, pole by pole. Our own site photographs will replace this stock image once they are provided."
+    }
+  },
+  "projects": {
+    "header": {
+      "eyebrow": "Projects",
+      "title": "Work on the ground.",
+      "lede": "Details of an LT line extension work from 2025, and a gallery that will fill up as site photographs are added."
+    },
+    "featured": {
+      "eyebrow": "Featured project",
+      "title": "LT extension to left-out houses from 25 KVA s/stn Khuddi-Gehra-1, Section Chandesh, UESD Bhaderwar",
+      "detailsTitle": "Work details",
+      "year": "Year",
+      "yearValue": "2025",
+      "type": "Type of work",
+      "typeValue": "LT line extension",
+      "substation": "Sub-station",
+      "substationValue": "25 KVA, Khuddi-Gehra-1",
+      "section": "Section",
+      "sectionValue": "Chandesh",
+      "subdivision": "Sub-division",
+      "subdivisionValue": "UESD Bhaderwar",
+      "scopeTitle": "Quantities executed"
+    },
+    "photos": {
+      "title": "Site photos coming soon",
+      "body": "Photographs from this work will be shown here once they are provided.",
+      "slot": "Photo slot {{n}}"
+    },
+    "gallery": {
+      "eyebrow": "Gallery",
+      "title": "Line work in pictures.",
+      "lede": "Until our own site photographs are uploaded, this gallery uses clearly labelled stock photographs to show the kind of work and terrain. None of the stock photographs show our project sites.",
+      "filterLabel": "Filter the gallery",
+      "all": "All",
+      "categories": {
+        "poles": "Pole erection",
+        "lines": "Lines and stringing",
+        "earthing": "Stays and earthing",
+        "substation": "Sub-stations",
+        "terrain": "Hill terrain"
+      },
+      "count_one": "Showing {{count}} item",
+      "count_other": "Showing {{count}} items",
+      "comingSoon": "Site photos coming soon",
+      "siteTag": "Our site",
+      "open": "Open photo: {{alt}}"
+    },
+    "lightbox": {
+      "label": "Photo viewer",
+      "close": "Close",
+      "prev": "Previous photo",
+      "next": "Next photo",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out",
+      "counter": "{{current}} of {{total}}",
+      "hint": "Arrow keys change the photo, + and - zoom, Esc closes."
+    },
+    "more": {
+      "title": "Other works",
+      "placeholder": "List of other executed works (name of work, sub-division, year) to be added."
+    }
+  },
+  "about": {
+    "header": {
+      "eyebrow": "About the firm",
+      "title": "An A-Class electrical contractor from Bhoranj.",
+      "lede": "M/s R.K. Govt. Contractor is a licensed A-Class government electrical contractor working from Village Doh, Tehsil Bhoranj, District Hamirpur, Himachal Pradesh."
+    },
+    "intro": {
+      "eyebrow": "Who we are",
+      "title": "A licensed firm for electricity board line work.",
+      "p1": "We hold an A-Class electrical contractor licence (Lic. No. A-1578) and are registered under GST. Our work is on LT distribution lines: erecting steel tubular poles, extending lines, stringing ACSR conductor, fixing stay sets and earthing.",
+      "p2": "We work for State Electricity Board sub-divisions, for example Electrical Sub Division Bhaderwar. We also supply line material such as RCC muff pipes, shackle insulators, D-iron, nuts and bolts, and aluminium paint."
+    },
+    "registration": {
+      "eyebrow": "Registration details",
+      "title": "The details that go on a tender.",
+      "firm": "Firm name",
+      "class": "Contractor class",
+      "classValue": "A-Class (Electrical)",
+      "licence": "Licence No.",
+      "gstin": "GSTIN",
+      "pan": "PAN",
+      "address": "Address"
+    },
+    "documents": {
+      "eyebrow": "Documents",
+      "title": "Licence and GST certificate.",
+      "lede": "Scanned copies will be displayed here once they are provided.",
+      "licence": "Electrical contractor licence, A-1578",
+      "gst": "GST registration certificate",
+      "slot": "Scan to be added"
+    },
+    "clients": {
+      "eyebrow": "Who we work for",
+      "title": "State Electricity Board sub-divisions.",
+      "body": "Our works are taken up for sub-divisions of the State Electricity Board. One example is Electrical Sub Division Bhaderwar.",
+      "placeholder": "Full list of client divisions and sub-divisions to be added."
+    },
+    "pending": {
+      "title": "Details still to be added",
+      "items": [
+        "Name of the proprietor or authorised signatory",
+        "Year of establishment",
+        "Team and equipment details",
+        "Firm logo"
+      ]
+    }
+  },
+  "contact": {
+    "header": {
+      "eyebrow": "Contact",
+      "title": "Call, WhatsApp or write to us.",
+      "lede": "For work orders, estimates and material supply enquiries, reach us directly by phone or on WhatsApp."
+    },
+    "details": {
+      "title": "Direct lines",
+      "phone": "Phone and WhatsApp",
+      "alternate": "Alternate number",
+      "address": "Address",
+      "map": "Open in Google Maps",
+      "email": "Email",
+      "emailPlaceholder": "Email address to be added.",
+      "hours": "Office hours",
+      "hoursPlaceholder": "Office hours to be added."
+    },
+    "form": {
+      "title": "Send an enquiry on WhatsApp",
+      "intro": "Fill in the details below. We will open WhatsApp with your message ready to send to 98163 35541.",
+      "requiredNote": "Fields marked * are required.",
+      "name": "Your name",
+      "phone": "Mobile number",
+      "phoneHint": "10-digit mobile number",
+      "org": "Office or sub-division",
+      "optional": "optional",
+      "service": "Enquiry about",
+      "serviceGeneral": "General enquiry",
+      "message": "Message",
+      "messageHint": "Name of work, location and quantities, if known.",
+      "submit": "Open WhatsApp with this message",
+      "errors": {
+        "summary": "Please correct the highlighted fields.",
+        "name": "Please enter your name.",
+        "phone": "Please enter a valid 10-digit mobile number.",
+        "message": "Please write a short message of at least 10 characters."
+      },
+      "success": {
+        "title": "Your message is ready in WhatsApp",
+        "body": "WhatsApp has opened in a new tab with your enquiry filled in. Press Send there to deliver it to us.",
+        "reopen": "Open WhatsApp again",
+        "another": "Write another message"
+      },
+      "wa": {
+        "intro": "Enquiry from the website",
+        "name": "Name",
+        "phone": "Mobile",
+        "org": "Office / sub-division",
+        "service": "Enquiry about",
+        "message": "Message"
+      }
+    }
+  },
+  "footer": {
+    "tagline": "A-Class government electrical contractor, Hamirpur (H.P.)",
+    "explore": "Explore",
+    "contact": "Contact",
+    "registration": "Registration",
+    "rights": "All rights reserved.",
+    "creditsLine": "Photography: stock photographs from Unsplash, used for illustration only. They do not show our project sites.",
+    "creditsSummary": "Photo credits ({{count}})",
+    "backToTop": "Back to top"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "This line is not connected.",
+    "body": "The page you are looking for does not exist or has been moved.",
+    "home": "Back to home",
+    "contact": "Contact us"
+  }
+}

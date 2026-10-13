@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Fingerprinted JS, CSS and font files never change, so cache them for a year.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# No SPA catch-all redirect is needed: the build writes one HTML file per route
+# (services.html, projects.html ...), which Netlify serves at /services etc.,
+# and 404.html, which Netlify serves with a real 404 status for unknown URLs.

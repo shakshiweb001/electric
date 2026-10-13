@@ -1,0 +1,349 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  color: var(--on-dark);
+}
+
+/* The solid backing fades in on scroll. It is a pseudo-element so that the
+   blur does not create a containing block for the full-screen mobile menu. */
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(10, 19, 28, 0.9);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid var(--line-dark);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.scrolled::before,
+.open::before {
+  opacity: 1;
+}
+
+.bar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  height: var(--header-h);
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  transition: height 0.4s var(--ease-out);
+}
+
+.scrolled .bar {
+  height: calc(var(--header-h) - 1rem);
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-right: auto;
+  text-decoration: none;
+}
+
+.mark {
+  flex: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition:
+    width 0.4s var(--ease-out),
+    height 0.4s var(--ease-out);
+}
+
+.scrolled .mark {
+  width: 2.125rem;
+  height: 2.125rem;
+}
+
+.brandText {
+  display: grid;
+  line-height: 1.15;
+}
+
+.brandName {
+  font-family: var(--font-head);
+  font-size: 1.0625rem;
+  font-weight: 800;
+  font-stretch: 106%;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.brandSub {
+  overflow: hidden;
+  max-height: 1.2rem;
+  color: var(--on-dark-soft);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  transition:
+    max-height 0.4s var(--ease-out),
+    opacity 0.3s ease;
+}
+
+.scrolled .brandSub {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* Desktop navigation */
+.nav {
+  display: none;
+}
+
+.navList {
+  display: flex;
+  gap: clamp(1.25rem, 2.4vw, 2.25rem);
+}
+
+.link {
+  position: relative;
+  display: block;
+  padding: 0.6rem 0;
+  font-family: var(--font-head);
+  font-size: 0.875rem;
+  font-weight: var(--fw-bold);
+  font-stretch: 100%;
+  letter-spacing: calc(var(--label-tracking) * 0.55);
+  text-decoration: none;
+  text-transform: var(--label-transform);
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0.3rem;
+  left: 0;
+  height: 2px;
+  background: var(--amber);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.link:hover::after,
+.link:focus-visible::after,
+.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Tools */
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.call {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  border-radius: var(--radius);
+  background: var(--amber);
+  color: var(--steel);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.25s ease;
+}
+
+.call:hover {
+  background: var(--amber-300);
+}
+
+.call svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.burger {
+  position: relative;
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgba(233, 238, 240, 0.32);
+  border-radius: var(--radius);
+  background: none;
+}
+
+.burgerLine {
+  position: absolute;
+  left: 0.7rem;
+  right: 0.7rem;
+  height: 2px;
+  background: currentColor;
+  transition:
+    transform 0.4s var(--ease-out),
+    top 0.4s var(--ease-out);
+}
+
+.burgerLine:nth-child(1) {
+  top: calc(50% - 5px);
+}
+
+.burgerLine:nth-child(2) {
+  top: calc(50% + 3px);
+}
+
+.open .burgerLine:nth-child(1) {
+  top: calc(50% - 1px);
+  transform: rotate(45deg);
+}
+
+.open .burgerLine:nth-child(2) {
+  top: calc(50% - 1px);
+  transform: rotate(-45deg);
+}
+
+/* Scroll progress */
+.progress {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  height: 2px;
+  background: var(--amber);
+  transform-origin: 0 50%;
+}
+
+/* Mobile menu */
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: calc(var(--header-h) + 2rem) var(--gutter) calc(2rem + env(safe-area-inset-bottom));
+  overflow-y: auto;
+  background: var(--steel-950);
+}
+
+.menuList {
+  display: grid;
+}
+
+.menuLink {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line-dark);
+  font-family: var(--font-head);
+  font-size: clamp(1.75rem, 8vw, 2.5rem);
+  font-weight: var(--fw-head);
+  font-stretch: var(--head-stretch);
+  letter-spacing: var(--head-tracking);
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.menuIndex {
+  color: var(--on-dark-soft);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-stretch: 100%;
+  letter-spacing: 0.08em;
+}
+
+.menuActive {
+  color: var(--amber);
+}
+
+.menuContact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.menuAction {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 4rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.menuAction svg {
+  flex: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: var(--amber);
+}
+
+.menuAction > span {
+  display: grid;
+}
+
+.menuActionLabel {
+  color: var(--on-dark-soft);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .brandSub {
+    display: none;
+  }
+
+  /* Two lines, so the name, language switch and menu button all fit. */
+  .brandName {
+    max-width: 6.5rem;
+    font-size: 0.875rem;
+    line-height: 1.08;
+    white-space: normal;
+  }
+
+  .mark {
+    width: 2.125rem;
+    height: 2.125rem;
+  }
+
+  .bar {
+    gap: 0.75rem;
+  }
+
+  .tools {
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .call {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    display: block;
+    margin-right: clamp(0.5rem, 2vw, 2rem);
+  }
+
+  .burger,
+  .menu {
+    display: none;
+  }
+}

@@ -1,0 +1,238 @@
+/* --- Registration facts ------------------------------------------- */
+.facts {
+  /* Overlaps the hero by a pixel so no seam shows under the ridge. */
+  margin-top: -1px;
+  padding: clamp(1rem, 3vw, 2rem) 0 clamp(3rem, 6vw, 5rem);
+  background: var(--steel);
+  color: var(--on-dark);
+}
+
+.factList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem 1.25rem;
+  margin: 0;
+}
+
+.fact {
+  display: grid;
+  gap: 0.35rem;
+  align-content: start;
+  padding-left: 1rem;
+  border-left: 2px solid var(--amber);
+}
+
+.fact dt {
+  color: var(--on-dark-soft);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-medium);
+  letter-spacing: calc(var(--label-tracking) * 0.6);
+  text-transform: var(--label-transform);
+}
+
+.fact dd {
+  margin: 0;
+  font-family: var(--font-head);
+  font-size: clamp(1rem, 0.8rem + 1vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+/* --- Services ------------------------------------------------------ */
+.services {
+  padding: var(--section-y) 0;
+  background: var(--grey);
+}
+
+.servicesHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+  gap: 1rem;
+}
+
+.serviceGrid > li {
+  display: flex;
+}
+
+.serviceGrid > li > * {
+  flex: 1;
+}
+
+.ask {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: clamp(1.4rem, 2.4vw, 1.9rem);
+  border-radius: var(--radius);
+  background: var(--steel);
+  color: var(--on-dark);
+}
+
+.askTitle {
+  font-size: var(--fs-h3);
+  line-height: calc(var(--head-leading) + 0.12);
+}
+
+.askBody {
+  margin-top: 0.85rem;
+  margin-bottom: 1.75rem;
+  color: var(--on-dark-soft);
+  line-height: 1.55;
+}
+
+.askButton {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* --- Featured project ---------------------------------------------- */
+.project {
+  padding: var(--section-y) 0;
+  background: var(--steel);
+  color: var(--on-dark);
+}
+
+.projectInner {
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 4rem);
+}
+
+.projectIntro {
+  display: grid;
+  gap: 2rem;
+  justify-items: start;
+  align-content: start;
+}
+
+.schematic {
+  align-self: center;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  background: var(--steel-800);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 1.25rem;
+  margin: 0;
+  padding-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid var(--line-dark);
+}
+
+/* Value above its label, while the markup keeps the dt / dd order. */
+.stat {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+.stat dt {
+  max-width: 14rem;
+  color: var(--on-dark-soft);
+  font-size: var(--fs-small);
+  line-height: 1.35;
+}
+
+.stat dd {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.statNumber {
+  color: var(--amber);
+  font-family: var(--font-head);
+  font-size: clamp(2.75rem, 1.8rem + 4vw, 5rem);
+  font-weight: 800;
+  font-stretch: 112%;
+  font-variant-numeric: tabular-nums lining-nums;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.statUnit {
+  color: var(--on-dark);
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* --- Region --------------------------------------------------------- */
+.region {
+  padding: var(--section-y) 0;
+  background: var(--grey-50);
+}
+
+.regionInner {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.regionText {
+  display: grid;
+  gap: 2rem;
+  justify-items: start;
+}
+
+.address {
+  display: flex;
+  gap: 0.9rem;
+  padding: 1.1rem 1.25rem;
+  border-left: 3px solid var(--pine);
+  background: #fff;
+}
+
+.address svg {
+  flex: none;
+  margin-top: 0.15rem;
+  color: var(--pine);
+}
+
+.address address {
+  font-style: normal;
+  font-weight: var(--fw-medium);
+  line-height: 1.45;
+}
+
+.addressLabel {
+  color: var(--ink-soft);
+  font-size: var(--fs-label);
+  letter-spacing: calc(var(--label-tracking) * 0.6);
+  text-transform: var(--label-transform);
+}
+
+@media (min-width: 720px) {
+  .factList,
+  .stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 960px) {
+  .projectInner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  }
+
+  .stats {
+    grid-column: 1 / -1;
+  }
+
+  .regionInner {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  }
+}

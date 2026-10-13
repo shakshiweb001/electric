@@ -1,0 +1,155 @@
+.icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  overflow: visible;
+}
+
+.accent {
+  stroke: var(--icon-accent, var(--amber));
+}
+
+.accentFill {
+  fill: var(--icon-accent, var(--amber));
+  stroke: none;
+}
+
+.soft {
+  opacity: 0.4;
+}
+
+/* Parts that move rotate and scale around their own centre. */
+.rise,
+.spin,
+.turn,
+.tense,
+.ring,
+.bob,
+.step {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.draw {
+  stroke-dasharray: 1;
+}
+
+/* --- Hover / focus animations --------------------------------------- */
+
+:global([data-hover-root]:hover) .draw,
+:global([data-hover-root]:focus-within) .draw {
+  animation: draw 0.9s var(--ease-out) both;
+}
+
+:global([data-hover-root]:hover) .rise,
+:global([data-hover-root]:focus-within) .rise {
+  animation: rise 0.7s var(--ease-out) both;
+}
+
+:global([data-hover-root]:hover) .spin,
+:global([data-hover-root]:focus-within) .spin {
+  animation: spin 1.1s var(--ease-out) both;
+}
+
+:global([data-hover-root]:hover) .turn,
+:global([data-hover-root]:focus-within) .turn {
+  animation: turn 0.8s var(--ease-out) both;
+}
+
+:global([data-hover-root]:hover) .tense,
+:global([data-hover-root]:focus-within) .tense {
+  transform-origin: 50% 100%;
+  animation: tense 0.8s var(--ease-out) both;
+}
+
+:global([data-hover-root]:hover) .ring,
+:global([data-hover-root]:focus-within) .ring {
+  animation: ring 0.9s var(--ease-out) both;
+}
+
+:global([data-hover-root]:hover) .bob,
+:global([data-hover-root]:focus-within) .bob {
+  animation: bob 0.7s var(--ease-out) both;
+}
+
+:global([data-hover-root]:hover) .glow,
+:global([data-hover-root]:focus-within) .glow {
+  animation: glow 1.1s ease-out both;
+}
+
+:global([data-hover-root]:hover) .step,
+:global([data-hover-root]:focus-within) .step {
+  animation: step 0.6s var(--ease-out) both;
+}
+
+:global([data-hover-root]:hover) .s2,
+:global([data-hover-root]:focus-within) .s2 {
+  animation-delay: 0.12s;
+}
+
+:global([data-hover-root]:hover) .s3,
+:global([data-hover-root]:focus-within) .s3 {
+  animation-delay: 0.24s;
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(7px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(-120deg);
+  }
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(-60deg);
+  }
+}
+
+@keyframes tense {
+  from {
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes ring {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.3;
+  }
+}
+
+@keyframes bob {
+  from {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes glow {
+  0%,
+  45% {
+    opacity: 0;
+  }
+}
+
+@keyframes step {
+  from {
+    transform: scaleX(0.2);
+    opacity: 0;
+  }
+}

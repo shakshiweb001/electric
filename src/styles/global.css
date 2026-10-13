@@ -1,0 +1,418 @@
+/* ------------------------------------------------------------------
+   Design tokens
+   Palette: transformer steel, galvanised grey, Himachal pine, live-line amber.
+------------------------------------------------------------------ */
+:root {
+  --steel-950: #08111a;
+  --steel: #0f1b26;
+  --steel-800: #152533;
+  --steel-700: #1d3142;
+  --steel-500: #3a5163;
+  --grey: #e3e8ea;
+  --grey-50: #f2f5f6;
+  --grey-300: #c7d0d4;
+  --grey-500: #8c9aa2;
+  --pine: #2e5b4c;
+  --pine-800: #1f4136;
+  --pine-200: #a9c8bc;
+  --amber: #f0a818;
+  --amber-300: #f6c964;
+
+  --ink: #13212c;
+  --ink-soft: #46565f;
+  --on-dark: #e9eef0;
+  --on-dark-soft: #a7b5bd;
+  --line-dark: rgba(227, 232, 234, 0.16);
+  --line-light: rgba(15, 27, 38, 0.14);
+
+  /* Archivo has no Devanagari, so Hindi headings fall through to Mukta. */
+  --font-head: 'Archivo Variable', 'Mukta', 'Noto Sans Devanagari', system-ui, sans-serif;
+  --font-body: 'Mukta', 'Noto Sans Devanagari', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --fw-medium: 600;
+  --fw-bold: 700;
+  --fw-head: 800;
+  --head-stretch: 112%;
+  --head-tracking: -0.02em;
+  --head-leading: 1.04;
+  --label-tracking: 0.14em;
+  --label-transform: uppercase;
+
+  --fs-display: clamp(2.5rem, 1.1rem + 5.2vw, 5.5rem);
+  --fs-h1: clamp(2.25rem, 1.4rem + 3.6vw, 4.5rem);
+  --fs-h2: clamp(1.85rem, 1.3rem + 2.4vw, 3.25rem);
+  --fs-h3: clamp(1.25rem, 1.12rem + 0.6vw, 1.6rem);
+  --fs-lede: clamp(1.125rem, 1.04rem + 0.42vw, 1.375rem);
+  --fs-body: clamp(1.0625rem, 1rem + 0.22vw, 1.1875rem);
+  --fs-small: 0.9375rem;
+  --fs-label: 0.8125rem;
+
+  --gutter: clamp(1.25rem, 4.5vw, 3rem);
+  --container: 77.5rem;
+  --section-y: clamp(4.5rem, 9vw, 8.5rem);
+  --header-h: 4.75rem;
+  --bar-h: 0px;
+  --radius: 3px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --header-h: 4rem;
+    /* Height of the fixed Call / WhatsApp bar on phones. */
+    --bar-h: 3.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --head-stretch: 100%;
+  }
+}
+
+/* Devanagari needs more line height, no tracking and no synthetic widths. */
+:lang(hi) {
+  --fw-head: 700;
+  --head-stretch: 100%;
+  --head-tracking: 0;
+  --head-leading: 1.3;
+  --label-tracking: 0.02em;
+  --fs-display: clamp(2.25rem, 1.1rem + 4.6vw, 5rem);
+}
+
+/* Latin text set inside a Hindi page (the firm's name, codes) keeps Latin settings. */
+[lang='en'] {
+  --fw-head: 800;
+  --head-stretch: 112%;
+  --head-tracking: -0.02em;
+  --head-leading: 1.04;
+  --label-tracking: 0.14em;
+}
+
+/* ------------------------------------------------------------------
+   Base
+------------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--steel);
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.62;
+  color: var(--ink);
+  background: var(--steel);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: var(--fw-head);
+  font-stretch: var(--head-stretch);
+  letter-spacing: var(--head-tracking);
+  line-height: var(--head-leading);
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+img,
+svg,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--steel);
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+main:focus {
+  outline: none;
+}
+
+/* ------------------------------------------------------------------
+   Shared helpers
+------------------------------------------------------------------ */
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 300;
+  padding: 0.75rem 1.1rem;
+  background: var(--amber);
+  color: var(--steel);
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+  border-radius: var(--radius);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+/* Small uppercase label with an amber tick, used above headings. */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+  font-family: var(--font-head);
+  font-size: var(--fs-label);
+  font-weight: var(--fw-bold);
+  font-stretch: 92%;
+  letter-spacing: var(--label-tracking);
+  line-height: 1.3;
+  text-transform: var(--label-transform);
+}
+
+.eyebrow::before {
+  content: '';
+  flex: none;
+  width: 2rem;
+  height: 2px;
+  background: var(--amber);
+}
+
+/* Codes such as GSTIN and licence numbers. */
+.code {
+  font-family: var(--font-head);
+  font-stretch: 100%;
+  font-variant-numeric: tabular-nums lining-nums;
+  letter-spacing: 0.02em;
+}
+
+/* ------------------------------------------------------------------
+   Scroll behaviour
+------------------------------------------------------------------ */
+html.scroll-locked {
+  overflow: hidden;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+
+.lenis [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* ------------------------------------------------------------------
+   Reduced motion: keep every end state, drop the movement.
+------------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Home hero text
+   Global (not a CSS module) because the same markup is written into
+   index.html as a static shell by vite-plugin-site.js, so the headline can
+   paint before the JavaScript arrives. --intro-shift lets the live hero pick
+   the reveal animation up at the point the shell had reached.
+------------------------------------------------------------------ */
+.shell {
+  display: flex;
+  align-items: flex-end;
+  color: var(--on-dark);
+}
+
+.shell .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* The shell text is English; hide it for visitors who will get Hindi. */
+.prefers-hi .shell .hero-content {
+  visibility: hidden;
+}
+
+.hero-content {
+  padding-top: calc(var(--header-h) + clamp(1rem, 3vh, 2.5rem));
+  /* Clears the poles of the line drawing, which scale with the width. */
+  padding-bottom: max(clamp(6rem, 19vh, 13rem), calc(10.2vw + 1.5rem));
+}
+
+.hero-eyebrow {
+  flex-wrap: wrap;
+  row-gap: 0.4rem;
+  color: var(--on-dark);
+  animation: hero-fade-up 0.9s var(--ease-out) calc(0.1s + var(--intro-shift, 0ms)) both;
+}
+
+.hero-licence {
+  padding: 0.2rem 0.55rem;
+  border: 1px solid rgba(240, 168, 24, 0.7);
+  border-radius: 2px;
+  color: var(--amber);
+  letter-spacing: 0.08em;
+}
+
+/* Heading styles are repeated here because the shell uses a <p>, leaving the
+   live <h1> as the only heading. */
+.hero-title {
+  margin-top: clamp(1rem, 2.6vh, 2rem);
+  font-family: var(--font-head);
+  font-weight: var(--fw-head);
+  font-stretch: var(--head-stretch);
+  letter-spacing: var(--head-tracking);
+  line-height: var(--head-leading);
+  text-wrap: balance;
+  /* Also limited by screen height, so the hero fits on short laptops. */
+  font-size: min(var(--fs-display), max(2.25rem, 9.2vh));
+}
+
+/* Each line sits in its own mask and slides up into view. The padding keeps
+   descenders and Devanagari vowel signs from being clipped by the mask. */
+.hero-line {
+  display: block;
+  overflow: hidden;
+  padding: 0.12em 0 0.1em;
+  margin: -0.12em 0 -0.1em;
+}
+
+.hero-line > span {
+  display: block;
+  transform: translateY(115%);
+  animation: hero-line-up 1.1s var(--ease-out) calc(0.2s + var(--i) * 0.13s + var(--intro-shift, 0ms)) forwards;
+}
+
+.hero-line:last-child > span {
+  color: var(--amber);
+}
+
+.hero-lede {
+  max-width: 44rem;
+  margin-top: clamp(1rem, 2.4vh, 1.75rem);
+  color: var(--on-dark);
+  font-size: var(--fs-lede);
+  line-height: 1.5;
+  animation: hero-fade-up 1s var(--ease-out) calc(0.65s + var(--intro-shift, 0ms)) both;
+}
+
+/* Reserves the height of the buttons, which only exist in the live hero. */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 0.85rem;
+  min-height: 3.25rem;
+  margin-top: clamp(1.25rem, 3.4vh, 2.5rem);
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    min-height: 7.1rem;
+  }
+
+  .hero-actions > * {
+    flex: 1 1 100%;
+  }
+}
+
+@keyframes hero-line-up {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

@@ -1,0 +1,104 @@
+/* Floating WhatsApp button (tablet and up) */
+.fab {
+  position: fixed;
+  right: clamp(1rem, 2.5vw, 2rem);
+  bottom: clamp(1rem, 2.5vw, 2rem);
+  z-index: 80;
+  display: none;
+  place-items: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  background: var(--pine);
+  color: #fff;
+  box-shadow: 0 10px 30px -8px rgba(8, 17, 26, 0.6);
+  transition:
+    transform 0.35s var(--ease-out),
+    background-color 0.25s ease;
+}
+
+.fab:hover {
+  background: var(--pine-800);
+  transform: translateY(-3px);
+}
+
+.fab svg {
+  position: relative;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--pine);
+  animation: pulse 2.8s ease-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: scale(1.55);
+  }
+}
+
+/* Bottom action bar (phones) */
+.bar {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 80;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  background: var(--steel-950);
+  box-shadow: 0 -8px 24px -12px rgba(0, 0, 0, 0.6);
+}
+
+.barCall,
+.barWhatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  height: var(--bar-h);
+  font-family: var(--font-head);
+  font-size: 0.9375rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: calc(var(--label-tracking) * 0.4);
+  text-decoration: none;
+  text-transform: var(--label-transform);
+}
+
+.barCall svg,
+.barWhatsapp svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.barCall {
+  background: var(--amber);
+  color: var(--steel);
+}
+
+.barWhatsapp {
+  background: var(--pine);
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .fab {
+    display: grid;
+  }
+
+  .bar {
+    display: none;
+  }
+}

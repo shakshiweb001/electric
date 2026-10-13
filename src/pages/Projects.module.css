@@ -1,0 +1,335 @@
+/* --- Featured project ---------------------------------------------- */
+.featured {
+  padding: var(--section-y) 0;
+  background: var(--steel);
+  color: var(--on-dark);
+}
+
+.eyebrow {
+  color: var(--amber);
+}
+
+.featuredTitle {
+  max-width: 52rem;
+  margin-top: 1.25rem;
+  font-size: clamp(1.5rem, 1.15rem + 1.7vw, 2.6rem);
+  line-height: calc(var(--head-leading) + 0.1);
+}
+
+.featuredGrid {
+  display: grid;
+  gap: 1rem;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.panel,
+.schematic {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius);
+  background: var(--steel-800);
+}
+
+.panelTitle {
+  font-size: 1.0625rem;
+  font-stretch: 100%;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+.rows {
+  display: grid;
+  margin: 1rem 0 0;
+}
+
+.rows > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.15rem 1.5rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--line-dark);
+}
+
+.rows dt {
+  color: var(--on-dark-soft);
+  font-size: var(--fs-small);
+}
+
+.rows dd {
+  margin: 0;
+  font-weight: var(--fw-medium);
+  text-align: right;
+}
+
+.quantity {
+  color: var(--amber);
+  font-family: var(--font-head);
+  font-size: 1.375rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+.schematic {
+  display: grid;
+  align-content: center;
+}
+
+/* "Site photos coming soon" slots */
+.slots {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1.5px dashed rgba(240, 168, 24, 0.6);
+  border-radius: var(--radius);
+}
+
+.slotsText p {
+  max-width: 28rem;
+  margin-top: 0.5rem;
+  color: var(--on-dark-soft);
+  font-size: var(--fs-small);
+}
+
+.slotList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.slot {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 0.5rem;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  background: repeating-linear-gradient(-45deg, rgba(233, 238, 240, 0.05) 0 10px, rgba(233, 238, 240, 0.015) 10px 20px);
+  color: var(--on-dark-soft);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.slot svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* --- Gallery -------------------------------------------------------- */
+.gallery {
+  padding: var(--section-y) 0;
+  background: var(--grey);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: clamp(2rem, 4vw, 3rem) 0 1.5rem;
+}
+
+.filter {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  border: 1px solid rgba(15, 27, 38, 0.28);
+  border-radius: 999px;
+  background: none;
+  color: var(--ink);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.filter:hover {
+  border-color: var(--steel);
+}
+
+.filterOn {
+  border-color: var(--steel);
+  color: var(--on-dark);
+}
+
+/* The dark pill slides from the old filter to the new one (shared layoutId). */
+.pill {
+  position: absolute;
+  inset: -1px;
+  border-radius: 999px;
+  background: var(--steel);
+}
+
+.filterLabel,
+.filterCount {
+  position: relative;
+}
+
+.filterCount {
+  min-width: 1.4rem;
+  padding: 0.05rem 0.35rem;
+  border-radius: 999px;
+  background: rgba(15, 27, 38, 0.1);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.filterOn .filterCount {
+  background: var(--amber);
+  color: var(--steel);
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17.5rem), 1fr));
+  gap: 1rem;
+}
+
+.tile {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--steel);
+  color: var(--on-dark);
+  text-align: left;
+  cursor: zoom-in;
+}
+
+.thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.thumbImage {
+  transition: transform 0.9s var(--ease-out);
+}
+
+.tile:hover .thumbImage,
+.tile:focus-visible .thumbImage {
+  transform: scale(1.07);
+}
+
+.badge {
+  position: absolute;
+  top: 0.65rem;
+  left: 0.65rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  background: rgba(8, 17, 26, 0.78);
+  color: var(--on-dark);
+  font-size: 0.6875rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  text-transform: var(--label-transform);
+}
+
+.badgeSite {
+  background: var(--pine);
+  color: #fff;
+}
+
+.tileFoot {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 0.85rem 0.75rem;
+  background: linear-gradient(180deg, rgba(8, 17, 26, 0) 0%, rgba(8, 17, 26, 0.86) 75%);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+}
+
+.tileFoot svg {
+  flex: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--amber);
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.4s var(--ease-out);
+}
+
+.tile:hover .tileFoot svg,
+.tile:focus-visible .tileFoot svg {
+  opacity: 1;
+  transform: none;
+}
+
+.soon {
+  position: relative;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 0.35rem;
+  aspect-ratio: 4 / 3;
+  padding: 2.25rem 1rem 1rem;
+  border: 1.5px dashed rgba(15, 27, 38, 0.38);
+  border-radius: var(--radius);
+  background: repeating-linear-gradient(-45deg, rgba(15, 27, 38, 0.045) 0 10px, rgba(15, 27, 38, 0.012) 10px 20px);
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+  text-align: center;
+}
+
+.soon svg {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.35rem;
+  color: var(--pine);
+}
+
+.soon strong {
+  color: var(--ink);
+  font-weight: var(--fw-medium);
+  line-height: 1.3;
+}
+
+.more {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 760px) {
+  .featuredGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .schematic {
+    grid-column: 1 / -1;
+  }
+
+  .slots {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+  }
+}
+
+@media (min-width: 1100px) {
+  .featuredGrid {
+    grid-template-columns: 0.9fr 0.9fr 1.3fr;
+  }
+
+  .schematic {
+    grid-column: auto;
+  }
+}

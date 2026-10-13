@@ -1,0 +1,21 @@
+.panel {
+  position: fixed;
+  inset: 0;
+  z-index: 91;
+  background: var(--steel-950);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.amber {
+  z-index: 90;
+  background: var(--amber);
+}
+
+.fromBottom {
+  transform-origin: 50% 100%;
+}
+
+.fromTop {
+  transform-origin: 50% 0%;
+}

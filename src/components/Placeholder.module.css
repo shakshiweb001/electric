@@ -1,0 +1,50 @@
+.box {
+  display: grid;
+  gap: 0.45rem;
+  justify-items: start;
+  padding: 1.1rem 1.25rem 1.2rem;
+  border: 1.5px dashed var(--amber);
+  border-radius: var(--radius);
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(240, 168, 24, 0.07) 0 10px,
+    rgba(240, 168, 24, 0.02) 10px 20px
+  );
+}
+
+.tag {
+  padding: 0.15rem 0.5rem;
+  background: var(--amber);
+  color: var(--steel);
+  font-family: var(--font-head);
+  font-size: 0.6875rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--label-tracking);
+  line-height: 1.5;
+  text-transform: var(--label-transform);
+}
+
+.body {
+  font-weight: var(--fw-medium);
+  line-height: 1.45;
+}
+
+.note {
+  font-size: var(--fs-small);
+}
+
+.light .body {
+  color: var(--ink);
+}
+
+.light .note {
+  color: var(--ink-soft);
+}
+
+.dark .body {
+  color: var(--on-dark);
+}
+
+.dark .note {
+  color: var(--on-dark-soft);
+}

@@ -1,0 +1,27 @@
+.frame {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: var(--ar);
+  border-radius: var(--radius);
+  background: var(--steel-700);
+}
+
+/* Taller than the frame, so the drift never exposes an edge. */
+.media {
+  position: absolute;
+  inset: -9% 0;
+  will-change: transform;
+}
+
+.caption {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+}
+
+@media (max-width: 899px) {
+  .frame {
+    aspect-ratio: 4 / 3;
+  }
+}
